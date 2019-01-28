@@ -1,0 +1,13 @@
+service: sqip-server
+description: "Deploying functions from GitLab using Knative"
+
+provider:
+  name: triggermesh
+  registry-secret: gitlab-registry
+
+functions:
+  sqip-server:
+    handler: sqip-server
+    runtime: https://gitlab.com/triggermesh/runtimes/raw/master/nodejs.yaml
+    description: "sqip-server function using node.js runtime"
+    reservedConcurrency: 4
