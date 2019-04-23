@@ -1,6 +1,6 @@
 FROM node:10-alpine
 
-RUN apk add --no-cache git musl-dev go
+RUN apk add --no-cache git musl-dev go imagemagick
 
 ENV GOPATH /go
 RUN go get -u github.com/fogleman/primitive
